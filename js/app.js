@@ -57,6 +57,10 @@ $('#board li').removeClass('disable');
 $('#board li').removeClass('o');
 $('#board li').removeClass('x');
 }
+else if ($(this).hasClass('disable')){
+
+	alert('Please pick a different spot')
+}
 
 });
 
