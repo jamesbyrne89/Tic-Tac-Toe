@@ -1,67 +1,98 @@
-$(document).ready(function(){
-
-var X = 'X';
-var O = 'O';
-var turns = 0;
-
-// Top Row
-var topLeft = $('top-left');
-var topMiddle = $('top-middle');
-var topRight = $('top-right');
-
-// Middle Row
-var middleLeft = $('middle-left');
-var middle = $('middle-middle');
-var middleRight = $('middle-right');
-
-// Bottom Row
-var bottomLeft = $('bottom-left');
-var bottomMiddle = $('bottom-middle');
-var bottomRight = $('bottom-right');
 
 
-
-$('#board li').on('click', function(){
-if (topLeft.hasClass('o') && topMiddle.hasClass('o') && topRight.hasClass('o') ||
-	topLeft.hasClass('o') && middle.hasClass('o') && bottomRight.hasClass('o') ||
-topMiddle.hasClass('o') && middle.hasClass('o') && bottomMiddle.hasClass('o') ||
-topRight.hasClass('o') && middle.hasClass('o') && bottomLeft.hasClass('o') ||
-middleLeft.hasClass('o') && middle.hasClass('o') && middleRight.hasClass('o') ||
-bottomLeft.hasClass('o') && bottomMiddle.hasClass('o') && bottomRight.hasClass('o') ||
-){
-alert('O won!');
-$('#board li').text('+');
-$('#board li').removeClass('disable');
-$('#board li').removeClass('o');
-$('#board li').removeClass('x');
-turns = 0;
-}
-else if (topLeft.hasClass('x') && topMiddle.hasClass('x') && topRight.hasClass('x') ||
-	topLeft.hasClass('x') && middle.hasClass('x') && bottomRight.hasClass('x') ||
-topMiddle.hasClass('x') && middle.hasClass('x') && bottomMiddle.hasClass('x') ||
-topRight.hasClass('x') && middle.hasClass('x') && bottomLeft.hasClass('x') ||
-middleLeft.hasClass('x') && middle.hasClass('x') && middleRight.hasClass('x') ||
-bottomLeft.hasClass('x') && bottomMiddle.hasClass('x') && bottomRight.hasClass('x') ||
-){
-alert('X won!');
-$('#board li').text('+');
-$('#board li').removeClass('disable');
-$('#board li').removeClass('o');
-$('#board li').removeClass('x');
-turns = 0;
-}
-else if (turns === 0){
-	alert("It's a tie!");
-$('#board li').text('+');
-$('#board li').removeClass('disable');
-$('#board li').removeClass('o');
-$('#board li').removeClass('x');
-}
-else if ($(this).hasClass('disable')){
-
-	alert('Please pick a different spot')
+function startGame(){
+		for (i = 1; i <= 9; i++){
+		reset(i);
+	}
+	document.turn = "X";
+	document.turnNo = 0;
+	document.winner = null;
+	setMessage("Ready? " + document.turn + " goes first")
 }
 
-});
 
-});
+
+function setMessage(msg){
+	document.getElementById("message").innerText = msg;
+}
+
+function makeMove(spot) {
+	if(document.winner!= null){
+		return;
+	}
+else if(spot.innerText == ""){	
+	spot.innerText = document.turn;
+	turnNo++;
+	showReset();
+	switchTurn();
+} else {
+	setMessage("Choose another square")
+	}
+}
+
+function switchTurn(){
+	if (detectWinner(document.turn)) {
+		setMessage(document.turn + " won!")
+		document.winner = document.turn;
+	}
+	else if (turnNo ==  9){
+		setMessage("It's a draw!");
+	}
+	else if(document.turn == "X"){
+		document.turn = "O";
+		setMessage("It's " + document.turn + "'s turn")
+	} else {
+		document.turn = "X";
+		setMessage("It's " + document.turn + "'s turn")
+	}
+
+}
+
+function detectWinner(move) {
+	var result = false;
+	if  (checkForRow(1,2,3,move) ||
+		checkForRow(2,5,8,move) ||
+		checkForRow(3,6,9,move) ||
+		checkForRow(4,5,6,move) ||
+		checkForRow(1,5,9,move) ||
+		checkForRow(3,5,7,move) ||
+		checkForRow(7,8,9,move) ||
+		checkForRow(1,4,7,move)) {
+	result = true;
+	}
+return result;
+}
+
+function checkForRow(a, b, c, move) {
+	var result = false;
+	if (getBox(a) == move && getBox(b) == move && getBox(c) == move){
+		result = true;
+	}
+	return result;
+}
+
+function getBox(number){
+	return document.getElementById("spot-" + number).innerText;
+}
+
+function showReset(){
+	if (turnNo > 0) {
+		 document.getElementById('reset').classList.add('visible-button');
+		 document.getElementById('reset').classList.remove('reset-button');
+	}
+	else {
+
+	}
+}
+function reset(number){
+	document.getElementById("spot-" + number).innerText ="";
+	turnNo = 0;
+}
+
+
+
+
+
+
+
+

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Play Tic-Tac-Toe by James Byrne |Front End Developer London</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body>
+    <body onLoad="startGame();">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -22,23 +22,30 @@
         <!-- Add your site or application content here -->
          
          <div id="app_wrapper">
-       <h1>Tic Tac Toe</h1>
-        <div id="board">
-            <ul id="top-row">
-                <li id="top-left">
-                <li id="top-middle">
-                <li id="top-right">
-            </ul>
-            <ul id="middle-row">
-                <li id="middle-left">
-                <li id="middle">
-                <li id="middle-right">
-            </ul>
-            <ul id="bottom-row">
-                <li id="bottom-left">
-                <li id="bottom-middle">
-                <li id="bottom-right">
-            </ul>
+       <h1>Tic-tac-toe</h1>
+        <table id="board">
+        <h2 class="message" id="message">Ready?</h2>
+        <tbody>
+             <tr id="top-row">
+                <td class="spot" id="spot-1" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-2" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-3" onClick="makeMove(this)"></td>
+            </tr>
+            <tr id="middle-row">
+                <td class="spot" id="spot-4" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-5" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-6" onClick="makeMove(this)"></td>
+            </tr>
+            <tr id="bottom-row">
+                <td class="spot" id="spot-7" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-8" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-9" onClick="makeMove(this)"></td>
+                </tr>
+                </tbody>
+            </table>
+           
+            <a id="reset" class="reset-button" href="javascript: startGame();">Reset</a>
+            
         </div>
         </div>
         <footer>
