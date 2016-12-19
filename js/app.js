@@ -84,6 +84,11 @@ function showReset(){
 
 	}
 }
+function hideReset(){
+	document.getElementById('reset').classList.remove('visible-button');
+	document.getElementById('reset').classList.add('reset-button');
+}
+
 function reset(number){
 	document.getElementById("spot-" + number).innerText ="";
 	turnNo = 0;

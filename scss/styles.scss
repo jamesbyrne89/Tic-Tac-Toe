@@ -8,8 +8,9 @@
 $lightBlue: #98dafc;
 $tan: #daad86;
 $navyBlue: #1E223F;
-$navyBlueLighter: #1A237E;
-$red: 	#F65557;
+$navyBlueLighter:	#5684A3;
+$red: 		#EB4B5F;
+$offWhite: #F2F1DE;
 
 * {
 	margin: 0;
@@ -24,7 +25,7 @@ body {
 }
 
 h1 {
-	color: white;
+	color: $offWhite;
 	font-family: 'variane script', 'grand hotel', georgia, serif;
 	font-style: italic;
 	text-align: center;
@@ -72,7 +73,7 @@ h1 {
 	.spot:hover {
 		background-color: $navyBlueLighter;
 		cursor: pointer;
-		color: #fff;
+		color: $offWhite;
 
 	}
 	}
@@ -154,30 +155,33 @@ h1 {
 
 }
 
-#button-wrapper {
-	width: 100%;
-	text-align: center;
-	margin-top: 1.5rem;
-}
 
 .reset-button {
 	visibility: hidden;
+
 }
 
 .visible-button {
-	color: #fff;
+	color: $offWhite;
 	visibility: visible;
 	text-align: center;
 	text-decoration: none;
-	font-size: 1.25em;
+	font-size: 1em;
 	font-family: inherit;
 	text-transform: uppercase;
 	font-family: 'oswald', helvetica, arial, sans-serif;
 	background: $navyBlueLighter;
-	width: 100%;
+	width: 33.33%;
 	display: block;
-	padding: 0.5rem;
-	border: solid 1px $red;
+	padding: 0.25rem;
+	text-align: center;
+	margin-top: 1.5rem;
+	margin: 1.5rem auto;
+
+	&:hover {
+		border: solid 2px $red;
+		transform: translate(0,-1px);
+	}
 }
 
 footer {
@@ -191,7 +195,7 @@ footer {
 	font-family: 'oswald', helvetica, arial, sans-serif;
 	text-transform: uppercase;
 	a {
-		color: #fff;
+		color: $offWhite;
 		text-transform: none;
 		text-decoration: none;
 		font-size: 1.75em;
