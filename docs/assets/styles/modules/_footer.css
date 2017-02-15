@@ -1,0 +1,23 @@
+footer {
+	width: 100%;
+	display: block;
+	color: $red;
+	font-size: 0.75em;
+	margin-top: 3.5rem;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	font-family: 'oswald', helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	a {
+		color: $offWhite;
+		text-transform: none;
+		text-decoration: none;
+		font-size: 1.75em;
+		margin-left: 0.5em;
+		transition: ease all .5s;
+		font-family: 'variane script', 'grand hotel', georgia, serif;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}

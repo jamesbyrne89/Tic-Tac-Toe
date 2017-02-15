@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Play Tic-Tac-Toe by James Byrne | Front End Developer in London</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles/styles-46f530dbb6.css"/>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+         
+         <main id="app_wrapper">
+       <h1 class="main-title">Tic-tac-toe</h1>
+        <table id="board">
+        <h2 class="message" id="message">Ready?</h2>
+        <tbody>
+             <tr id="top-row">
+                <td class="spot" id="spot-1" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-2" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-3" onClick="makeMove(this)"></td>
+            </tr>
+            <tr id="middle-row">
+                <td class="spot" id="spot-4" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-5" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-6" onClick="makeMove(this)"></td>
+            </tr>
+            <tr id="bottom-row">
+                <td class="spot" id="spot-7" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-8" onClick="makeMove(this)"></td>
+                <td class="spot" id="spot-9" onClick="makeMove(this)"></td>
+                </tr>
+                </tbody>
+            </table>
+           
+            <a id="reset" class="reset-button" href="javascript: startGame(); hideReset();">Reset</a>
+            
+         <footer>
+            A coding project by <a href="http://jamestbyrne.com">James Byrne</a>
+        </footer>
+        </main>
+       
+        <script src="assets/scripts/app-495bb7a341.js"></script>
+    </body>
+</html>

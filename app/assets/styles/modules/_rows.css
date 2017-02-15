@@ -1,0 +1,15 @@
+#top-row {
+	display: flex;	
+	height: 33.333%;
+	flex-wrap: no-wrap;
+}
+#middle-row {
+	display: flex;	
+	height: 33.333%;
+	flex-wrap: no-wrap;
+}
+#bottom-row {
+	display: flex;	
+	height: 33.333%;
+	flex-wrap: no-wrap;
+}

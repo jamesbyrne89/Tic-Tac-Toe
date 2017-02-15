@@ -1,0 +1,69 @@
+	.spot {
+		width: 33.33%;
+		height: 100%;
+		margin: 0px;
+		display: table;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 5em;
+		transition: all 0.2s;
+		color: $navyBlueLighter;
+		font-family: 'oswald', helvetica, arial, sans-serif;
+	}
+	.spot:hover {
+		background-color: $navyBlueLighter;
+		cursor: pointer;
+		color: $offWhite;
+
+	}
+
+#spot-1 {
+	border-right: solid 3px $red;
+	border-bottom: solid 3px $red;
+}
+#spot-2 {
+	border-left: solid 3px $red;
+	border-right: solid 3px $red;
+	border-bottom: solid 3px $red;
+}
+
+#spot-3 {
+	border-left: solid 3px $red;
+	border-bottom: solid 3px $red;
+}
+
+#spot-4 {
+	border-top: solid 3px $red;
+	border-right: solid 3px $red;
+	border-bottom: solid 3px $red;
+}
+
+#spot-5 {
+	border-top: solid 3px $red;
+	border-right: solid 3px $red;
+	border-bottom: solid 3px $red;
+	border-left: solid 3px $red;
+}
+
+#spot-6 {
+	border-top: solid 3px $red;
+	border-left: solid 3px $red;
+	border-bottom: solid 3px $red;
+}
+
+#spot-7 {
+	border-top: solid 3px $red;
+	border-right: solid 3px $red;
+}
+
+#spot-8 {
+	border-right: solid 3px $red;
+	border-top: solid 3px $red;
+	border-left: solid 3px $red;
+}
+
+#spot-9 {
+	border-left: solid 3px $red;
+	border-top: solid 3px $red;
+
+}
