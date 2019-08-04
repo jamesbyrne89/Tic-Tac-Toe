@@ -23,7 +23,7 @@
     "gulp-uglify": "^2.0.1",
     "gulp-usemin": "^0.3.28",
     "gulp-watch": "^4.3.11",
-    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "postcss-import": "^9.1.0",
     "postcss-mixins": "^5.4.1",
     "postcss-nested": "^1.0.0",
