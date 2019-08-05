@@ -16,7 +16,7 @@
     "gulp-babel": "^6.1.2",
     "gulp-cssnano": "^2.1.2",
     "gulp-debug": "^3.0.0",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-jsbeautify": "^0.1.1",
     "gulp-postcss": "^6.3.0",
     "gulp-rev": "^7.1.2",
