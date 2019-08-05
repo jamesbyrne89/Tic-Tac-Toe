@@ -20,7 +20,7 @@
     "gulp-jsbeautify": "^0.1.1",
     "gulp-postcss": "^6.3.0",
     "gulp-rev": "^7.1.2",
-    "gulp-uglify": "^2.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-usemin": "^0.3.28",
     "gulp-watch": "^4.3.11",
     "imagemin-jpeg-recompress": "^5.1.0",
