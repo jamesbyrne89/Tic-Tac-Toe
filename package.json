@@ -24,7 +24,7 @@
     "gulp-usemin": "^0.3.28",
     "gulp-watch": "^4.3.11",
     "imagemin-jpeg-recompress": "^5.1.0",
-    "postcss-import": "^9.1.0",
+    "postcss-import": "^12.0.1",
     "postcss-mixins": "^5.4.1",
     "postcss-nested": "^1.0.0",
     "postcss-simple-vars": "^3.0.0"
